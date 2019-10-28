@@ -1,0 +1,14 @@
+﻿@page
+@model Test3.Pages.EmployModel
+@{
+    ViewData["Title"] = "Employ";
+}
+
+<h1>Employ</h1>
+@foreach(var a_list in Model.URoles)
+{
+    <h1>@a_list.RoleId</h1>
+    <a asp-page="./Ind" asp-route-id="@a_list.RoleId">Go to Ind</a>
+}
+
+
